@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;850&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --brand-gold: #f6be39;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-brand-gold: #f6be39;
+}
+
+/* Shared utility classes for brand identity */
+.text-brand-gold {
+  color: var(--brand-gold, #f6be39);
+}
+
+.bg-brand-gold {
+  background-color: var(--brand-gold, #f6be39);
+}
+
+.border-brand-gold {
+  border-color: var(--brand-gold, #f6be39);
+}
+
+.brand-logo-img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  clip-path: inset(4% 3% 4% 3%);
+  border-radius: 4px;
+}
+
+.brand-title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--brand-gold, #f6be39);
+  font-size: 0.875rem;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 640px) {
+  .brand-title {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+/* Shared Business Hours Styling */
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hours-day {
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.hours-time {
+  color: var(--brand-gold, #f6be39);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Custom horizontal scrollbar for testimonials slide */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #15171C;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4f4634;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #f6be39;
+}
